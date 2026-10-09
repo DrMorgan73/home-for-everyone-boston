@@ -12,42 +12,45 @@
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="index.html"><img src="assets/logo.webp" alt="Home for Everyone — Boston"><span class="word">HOME FOR EVERYONE<small>BOSTON</small></span></a>
-    <button class="menu-btn" onclick="document.querySelector('nav.main').classList.toggle('open')">☰ Menu</button>
     <nav class="main">
-      <a href="index.html">Home</a>
-      <a href="listings.html">Listings</a>
-      <a href="sell.html">Sell</a>
-      <a href="mortgage.html">Mortgage</a>
-      <a href="about.html" class="active">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="listings.html" data-i18n="nav_listings">Listings</a>
+      <a href="sell.html" data-i18n="nav_sell">Sell</a>
+      <a href="mortgage.html" data-i18n="nav_mortgage">Mortgage</a>
+      <a href="about.html" class="active" data-i18n="nav_about">About</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
     </nav>
+    <div class="lang-toggle" role="group" aria-label="Language / Idioma">
+      <button type="button" data-setlang="en" class="active">EN</button><button type="button" data-setlang="es">ES</button>
+    </div>
+    <button class="menu-btn" data-i18n="menu_btn" onclick="document.querySelector('nav.main').classList.toggle('open')">☰ Menu</button>
   </div>
 </header>
 
 <section class="hero" style="padding:64px 0 52px">
   <div class="wrap">
-    <div class="kicker">About the brokerage</div>
-    <h1>Built on a simple belief:<br><em>everyone deserves home.</em></h1>
-    <p class="lede" data-hfe="about_text">HOME FOR ALL REALTY LLC is a Boston brokerage founded on the idea that great real estate service shouldn't depend on the size of the deal. First-time buyer or seasoned investor — you get the same launch-grade marketing and the same relentless advocacy.</p>
+    <div class="kicker" data-i18n="ab_kicker">About the brokerage</div>
+    <h1 data-i18n="ab_h1">Built on a simple belief:<br><em>everyone deserves home.</em></h1>
+    <p class="lede" data-hfe="about_text">HOME FOR ALL REALTY LLC is a Boston brokerage founded on the idea that great real estate service shouldn&rsquo;t depend on the size of the deal. First-time buyer or seasoned investor — you get the same launch-grade marketing and the same relentless advocacy.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap split">
     <div>
-      <div class="eyebrow">What we stand for</div>
-      <h2>Boutique by design.</h2>
+      <div class="eyebrow" data-i18n="ab_eyebrow">What we stand for</div>
+      <h2 data-i18n="ab_h2">Boutique by design.</h2>
       <ul class="check">
-        <li><strong>Every client, every time</strong> — no junior handoffs, no disappearing acts</li>
-        <li><strong>Marketing that earns attention</strong> — photography, video, and staging on every listing</li>
-        <li><strong>Straight numbers</strong> — honest pricing guidance, investor-grade analysis</li>
-        <li><strong>Boston roots</strong> — based at 38 Central Square, serving Greater Boston's neighborhoods</li>
+        <li data-i18n="ab_li1"><strong>Every client, every time</strong> — no junior handoffs, no disappearing acts</li>
+        <li data-i18n="ab_li2"><strong>Marketing that earns attention</strong> — photography, video, and staging on every listing</li>
+        <li data-i18n="ab_li3"><strong>Straight numbers</strong> — honest pricing guidance, investor-grade analysis</li>
+        <li data-i18n="ab_li4"><strong>Boston roots</strong> — based at 38 Central Square, serving Greater Boston&rsquo;s neighborhoods</li>
       </ul>
     </div>
     <div class="card">
-      <div class="eyebrow">The brokerage</div>
-      <h3>HOME FOR ALL REALTY LLC</h3>
-      <p style="color:var(--muted);font-size:14.5px">Trading as <strong>Home for Everyone — Boston</strong>.<br><br>
+      <div class="eyebrow" data-i18n="ab_card_eyebrow">The brokerage</div>
+      <h3 data-i18n="ab_card_h">HOME FOR ALL REALTY LLC</h3>
+      <p style="color:var(--muted);font-size:14.5px" data-i18n="ab_card_p">Trading as <strong>Home for Everyone — Boston</strong>.<br><br>
       38 Central Sq Suite 4<br>Boston, MA 02128<br><br>
       Massachusetts Real Estate Broker<br>License 24011548-RE-LC<br><br>
       Residential sales · Investment properties · Property management</p>
@@ -57,27 +60,27 @@
 
 <section class="section">
   <div class="wrap">
-    <div class="eyebrow">Meet your agent</div>
-    <h2>Salustia Ortiz.</h2>
+    <div class="eyebrow" data-i18n="ab_meet_eyebrow">Meet your agent</div>
+    <h2 data-i18n="ab_meet_h">Salustia Ortiz.</h2>
     <div class="card" style="display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap">
       <div style="flex:0 0 auto;width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--green-deep));color:var(--gold-soft);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:40px">SO</div>
       <div style="flex:1;min-width:260px">
         <h3 style="font-family:var(--serif);color:var(--green-deep);font-size:26px;margin-bottom:2px">Salustia Ortiz</h3>
-        <p style="color:#a5813f;font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:12px">Broker · Dreamcatcher Investment Group, Inc.</p>
-        <p style="font-size:13.5px;color:var(--muted);margin-bottom:4px"><strong>Licensed:</strong> MA REB 9524971 · RI REB 0019100 · CT REB 0793487</p>
-        <p style="font-size:13.5px;color:var(--muted);margin-bottom:4px"><strong>Certified Loss Mitigation Specialist</strong></p>
-        <p style="font-size:13.5px;color:var(--muted);margin-bottom:14px">Proud member of the Women&apos;s Business Enterprise National Council &amp; the Greater New England Minority Supplier Development Council</p>
-        <p style="color:var(--muted);font-size:14.5px">I&apos;m an expert real estate agent with Dreamcatcher Investment Group, Inc. in Boston, MA and the nearby area, providing home-buyers and sellers with professional, responsive and attentive real estate services. Want an agent who&apos;ll really listen to what you want in a home? Need an agent who knows how to effectively market your home so it sells? Give me a call! I&apos;m eager to help and would love to talk to you.</p>
+        <p style="color:#a5813f;font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:12px" data-i18n="ab_role">Broker · Dreamcatcher Investment Group, Inc.</p>
+        <p style="font-size:13.5px;color:var(--muted);margin-bottom:4px"><strong data-i18n="ab_licensed">Licensed:</strong> MA REB 9524971 · RI REB 0019100 · CT REB 0793487</p>
+        <p style="font-size:13.5px;color:var(--muted);margin-bottom:4px"><strong data-i18n="ab_cert">Certified Loss Mitigation Specialist</strong></p>
+        <p style="font-size:13.5px;color:var(--muted);margin-bottom:14px" data-i18n="ab_wbenc">Proud member of the Women&rsquo;s Business Enterprise National Council &amp; the Greater New England Minority Supplier Development Council</p>
+        <p style="color:var(--muted);font-size:14.5px" data-i18n="ab_bio">I&rsquo;m an expert real estate agent with Dreamcatcher Investment Group, Inc. in Boston, MA and the nearby area, providing home-buyers and sellers with professional, responsive and attentive real estate services. Want an agent who&rsquo;ll really listen to what you want in a home? Need an agent who knows how to effectively market your home so it sells? Give me a call! I&rsquo;m eager to help and would love to talk to you.</p>
         <div class="row" style="margin-top:16px">
           <div>
-            <p style="font-size:13.5px;color:var(--muted)"><strong>Boston</strong><br>38 Central Sq Suite 4<br>Boston, MA 02128<br>Office: 617-596-3404</p>
+            <p style="font-size:13.5px;color:var(--muted)"><strong>Boston</strong><br>38 Central Sq Suite 4<br>Boston, MA 02128<br><span data-i18n="ab_office">Office:</span> 617-596-3404</p>
           </div>
           <div>
-            <p style="font-size:13.5px;color:var(--muted)"><strong>Worcester</strong><br>61 Harvard St #1<br>Worcester, MA 01606<br>Mobile: 508-369-6462</p>
+            <p style="font-size:13.5px;color:var(--muted)"><strong>Worcester</strong><br>61 Harvard St #1<br>Worcester, MA 01606<br><span data-i18n="ab_mobile">Mobile:</span> 508-369-6462</p>
           </div>
         </div>
-        <p style="font-size:13.5px;color:var(--muted);margin-top:10px"><strong>Email:</strong> processingloans24@gmail.com</p>
-        <div class="cta-row" style="margin-top:18px"><a class="btn" href="contact.html">Work with Salustia</a></div>
+        <p style="font-size:13.5px;color:var(--muted);margin-top:10px"><strong data-i18n="ab_email">Email:</strong> processingloans24@gmail.com</p>
+        <div class="cta-row" style="margin-top:18px"><a class="btn" href="contact.html" data-i18n="cta_work">Work with Salustia</a></div>
       </div>
     </div>
   </div>
@@ -85,10 +88,10 @@
 
 <section class="section alt">
   <div class="wrap center">
-    <div class="eyebrow">Work with us</div>
-    <h2>Agents: build your business here.</h2>
-    <p class="sub">We're growing. If you're a licensed agent who wants real marketing support, modern tools, and a brokerage that invests in your listings — let's talk.</p>
-    <div class="cta-row" style="justify-content:center;margin-top:20px"><a class="btn" href="contact.html">Join the brokerage</a></div>
+    <div class="eyebrow" data-i18n="ab_wu_eyebrow">Work with us</div>
+    <h2 data-i18n="ab_wu_h">Agents: build your business here.</h2>
+    <p class="sub" data-i18n="ab_wu_p">We&rsquo;re growing. If you&rsquo;re a licensed agent who wants real marketing support, modern tools, and a brokerage that invests in your listings — let&rsquo;s talk.</p>
+    <div class="cta-row" style="justify-content:center;margin-top:20px"><a class="btn" href="contact.html" data-i18n="cta_join">Join the brokerage</a></div>
   </div>
 </section>
 
@@ -96,12 +99,13 @@
   <div class="foot-grid">
     <div class="foot-brand">
       <img src="assets/logo.webp" alt="Home for Everyone — Boston">
-      <p>HOME FOR ALL REALTY LLC — a boutique Boston brokerage for buyers, sellers, and investors. 38 Central Sq Suite 4, Boston, MA 02128.</p>
+      <p data-i18n="foot_blurb">HOME FOR ALL REALTY LLC — a boutique Boston brokerage for buyers, sellers, and investors. 38 Central Sq Suite 4, Boston, MA 02128.</p>
     </div>
-    <div><h4>Brand</h4><a href="brand.html">Brand guidelines</a><a href="contact.html">Press inquiries</a></div>
+    <div><h4 data-i18n="foot_brand_h">Brand</h4><a href="brand.html" data-i18n="foot_brand_guide">Brand guidelines</a><a href="contact.html" data-i18n="foot_press">Press inquiries</a></div>
   </div>
-  <div class="foot-bottom"><span>© 2026 HOME FOR ALL REALTY LLC. All rights reserved. · MA Broker License 24011548-RE-LC</span><span>Home for Everyone — Boston</span></div>
+  <div class="foot-bottom"><span data-i18n="foot_rights">© 2026 HOME FOR ALL REALTY LLC. All rights reserved. · MA Broker License 24011548-RE-LC</span><span>Home for Everyone — Boston</span></div>
 </footer>
 <script src="assets/admin-data.js"></script>
+<script src="assets/i18n.js"></script>
 </body>
 </html>
