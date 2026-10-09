@@ -10,7 +10,7 @@ var DEFAULTS={
   phone:"",
   email:"",
   hero_title:"A home for everyone.<br><em>Right here in Boston.</em>",
-  hero_lede:"Buy, sell, and invest with a boutique brokerage that treats your move like its own. Modern marketing, honest guidance, and relentless follow-through — from first tour to final signature.",
+  hero_lede:"Whether you are buying your first home, selling the one you love, or building wealth through investment \u2014 my goal is simple: a smooth, seamless, successful transaction from start to finish.",
   theme_green:"#0c3b2e",
   theme_gold:"#c6a15b",
   theme_bg:"#faf7f0",
