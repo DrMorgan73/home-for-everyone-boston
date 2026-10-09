@@ -35,6 +35,13 @@ cta_all:"View all listings",
 mls_eyebrow:"MLS search",mls_h:"Every home in Massachusetts. One search.",
 mls_p:"Browse every active listing through our official MLS property search \u2014 fed directly from the MLS and updated regularly.",
 cta_mls:"Search the MLS",
+sr_kicker:"MLS search",sr_h1:"Search every listing.",
+sr_lede:"Start here \u2014 live MLS results open on Salustia\u2019s official property search, updated directly from the MLS.",
+sr_loc:"City, neighborhood, or address",sr_loc_ph:"e.g. Boston, Jamaica Plain\u2026",
+sr_minp:"Min price",sr_maxp:"Max price",sr_any:"Any",
+sr_beds:"Beds",sr_baths:"Baths",sr_type:"Property type",
+cta_search:"Search homes",
+sr_note:"Free to use \u2014 results open on our official MLS search, included with our MLS membership. No extra fees, no sign-up needed to browse.",
 idx_eyebrow4:"How it works",idx_h2_4:"Three steps to your keys.",
 idx_s1t:"Talk",idx_s1p:"Tell us what you\u2019re after \u2014 or what you\u2019re selling. We listen first, then build the plan around your timeline.",
 idx_s2t:"Tour / Launch",idx_s2p:"Buyers tour curated homes. Sellers get a full marketing launch: photos, video, listings live everywhere.",
@@ -113,6 +120,13 @@ cta_all:"Ver todas las propiedades",
 mls_eyebrow:"B\u00fasqueda en el MLS",mls_h:"Todas las casas de Massachusetts. Una sola b\u00fasqueda.",
 mls_p:"Explore todas las propiedades activas con nuestra b\u00fasqueda oficial de propiedades del MLS \u2014 informaci\u00f3n directa del MLS, actualizada peri\u00f3dicamente.",
 cta_mls:"Buscar en el MLS",
+sr_kicker:"B\u00fasqueda MLS",sr_h1:"Busque entre todas las propiedades.",
+sr_lede:"Comience aqu\u00ed \u2014 los resultados en vivo del MLS se abren en la b\u00fasqueda oficial de propiedades de Salustia, actualizada directamente del MLS.",
+sr_loc:"Ciudad, vecindario o direcci\u00f3n",sr_loc_ph:"ej. Boston, Jamaica Plain\u2026",
+sr_minp:"Precio m\u00ednimo",sr_maxp:"Precio m\u00e1ximo",sr_any:"Cualquiera",
+sr_beds:"Habitaciones",sr_baths:"Ba\u00f1os",sr_type:"Tipo de propiedad",
+cta_search:"Buscar casas",
+sr_note:"Gratis \u2014 los resultados se abren en nuestra b\u00fasqueda oficial del MLS, incluida en nuestra membres\u00eda del MLS. Sin cargos adicionales, sin registro para explorar.",
 idx_eyebrow4:"C\u00f3mo funciona",idx_h2_4:"Tres pasos hacia sus llaves.",
 idx_s1t:"Conversemos",idx_s1p:"Cu\u00e9ntenos qu\u00e9 busca \u2014 o qu\u00e9 vende. Primero escuchamos, luego armamos el plan seg\u00fan su cronograma.",
 idx_s2t:"Visitas / Lanzamiento",idx_s2p:"Los compradores visitan casas seleccionadas. Los vendedores reciben un lanzamiento completo de marketing: fotos, video y publicaci\u00f3n en todos los portales.",
@@ -331,6 +345,10 @@ function apply(){
   document.querySelectorAll("[data-i18n]").forEach(function(el){
     var v=T(el.getAttribute("data-i18n"));
     if(v!=null)el.innerHTML=v;
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach(function(el){
+    var v=T(el.getAttribute("data-i18n-ph"));
+    if(v!=null)el.setAttribute("placeholder",v);
   });
   document.querySelectorAll("[data-setlang]").forEach(function(b){
     b.classList.toggle("active",b.getAttribute("data-setlang")===l);

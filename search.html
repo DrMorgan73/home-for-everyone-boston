@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search the MLS | Home for Everyone — Boston</title>
+<meta name="description" content="Search every MLS listing in Massachusetts through Home for Everyone — Boston (HOME FOR ALL REALTY LLC). Free, no sign-up needed to browse.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="assets/logo.webp">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html"><img src="assets/logo.webp" alt="Home for Everyone — Boston"><span class="word">HOME FOR EVERYONE<small>BOSTON</small></span></a>
+    <nav class="main">
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="listings.html" data-i18n="nav_listings">Listings</a>
+      <a href="sell.html" data-i18n="nav_sell">Sell</a>
+      <a href="mortgage.html" data-i18n="nav_mortgage">Mortgage</a>
+      <a href="about.html" data-i18n="nav_about">About</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="lang-toggle" role="group" aria-label="Language / Idioma">
+      <button type="button" data-setlang="en" class="active">EN</button><button type="button" data-setlang="es">ES</button>
+    </div>
+    <button class="menu-btn" data-i18n="menu_btn" onclick="document.querySelector('nav.main').classList.toggle('open')">☰ Menu</button>
+  </div>
+</header>
+
+<section class="hero" style="padding:64px 0 52px">
+  <div class="wrap">
+    <div class="kicker" data-i18n="sr_kicker">MLS search</div>
+    <h1 data-i18n="sr_h1">Search every listing.</h1>
+    <p class="lede" data-i18n="sr_lede">Start here — live MLS results open on Salustia&rsquo;s official property search, updated directly from the MLS.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="form" style="margin:0 auto">
+      <form id="mls-search" onsubmit="return openMlsSearch(event)">
+        <label for="s-loc" data-i18n="sr_loc">City, neighborhood, or address</label>
+        <input id="s-loc" data-i18n-ph="sr_loc_ph" placeholder="e.g. Boston, Jamaica Plain…">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 16px">
+          <div>
+            <label for="s-minp" data-i18n="sr_minp">Min price</label>
+            <select id="s-minp">
+              <option value="" data-i18n="sr_any">Any</option>
+              <option>$200,000</option><option>$300,000</option><option>$400,000</option>
+              <option>$500,000</option><option>$750,000</option><option>$1,000,000</option>
+              <option>$1,500,000</option>
+            </select>
+          </div>
+          <div>
+            <label for="s-maxp" data-i18n="sr_maxp">Max price</label>
+            <select id="s-maxp">
+              <option value="" data-i18n="sr_any">Any</option>
+              <option>$300,000</option><option>$400,000</option><option>$500,000</option>
+              <option>$750,000</option><option>$1,000,000</option><option>$1,500,000</option>
+              <option>$2,000,000</option>
+            </select>
+          </div>
+          <div>
+            <label for="s-beds" data-i18n="sr_beds">Beds</label>
+            <select id="s-beds">
+              <option value="" data-i18n="sr_any">Any</option>
+              <option>1+</option><option>2+</option><option>3+</option><option>4+</option><option>5+</option>
+            </select>
+          </div>
+          <div>
+            <label for="s-baths" data-i18n="sr_baths">Baths</label>
+            <select id="s-baths">
+              <option value="" data-i18n="sr_any">Any</option>
+              <option>1+</option><option>2+</option><option>3+</option><option>4+</option>
+            </select>
+          </div>
+        </div>
+        <label for="s-type" data-i18n="sr_type">Property type</label>
+        <select id="s-type">
+          <option value="" data-i18n="sr_any">Any</option>
+          <option data-i18n="opt_condo">Condo</option>
+          <option data-i18n="opt_single">Single-family</option>
+          <option data-i18n="opt_multi">Multi-family</option>
+          <option data-i18n="opt_town">Townhouse</option>
+        </select>
+        <div class="cta-row" style="margin-top:24px">
+          <button class="btn" type="submit" data-i18n="cta_search">Search homes</button>
+        </div>
+        <p class="note" data-i18n="sr_note">Free to use — results open on our official MLS search, included with our MLS membership. No extra fees, no sign-up needed to browse.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <img src="assets/logo.webp" alt="Home for Everyone — Boston">
+      <p data-i18n="foot_blurb">HOME FOR ALL REALTY LLC — a boutique Boston brokerage for buyers, sellers, and investors. 38 Central Sq Suite 4, Boston, MA 02128.</p>
+    </div>
+    <div><h4 data-i18n="foot_brand_h">Brand</h4><a href="brand.html" data-i18n="foot_brand_guide">Brand guidelines</a><a href="contact.html" data-i18n="foot_press">Press inquiries</a></div>
+  </div>
+  <div class="foot-bottom"><span data-i18n="foot_rights">© 2026 HOME FOR ALL REALTY LLC. All rights reserved. · MA Broker License 24011548-RE-LC</span><span>Home for Everyone — Boston</span></div>
+</footer>
+<script>
+/* Hands the search off to Salustia's official MLS (IDX) search — free with her MLSPIN membership, no extra fees. */
+function openMlsSearch(e){
+  e.preventDefault();
+  window.open("https://idx.mlspin.com/MLS.IDX/Search/index?agentid=BB807932","_blank","noopener");
+  return false;
+}
+</script>
+<script src="assets/admin-data.js"></script>
+<script src="assets/i18n.js"></script>
+</body>
+</html>
