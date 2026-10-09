@@ -328,7 +328,7 @@ STRINGS.es.br_never_p="Jerga sin explicaci\u00f3n. Garant\u00edas sobre precios 
    value still matches the English default. */
 var HFE_ES_DEFAULTS={
 hero_title:"Un hogar para todos.<br><em>Aqu\u00ed mismo en Boston.</em>",
-hero_lede:"Ya sea que compre su primera casa, venda la que ama o haga crecer su patrimonio invirtiendo \u2014 mi objetivo es simple: una transacci\u00f3n fluida, impecable y exitosa de principio a fin.",
+hero_lede:"Como corredora de bienes ra\u00edces con m\u00e1s de 28 a\u00f1os en este mercado en constante cambio, he aprendido algo: todo mercado premia a quien va bien guiado. Ya sea que compre su primera casa, venda la que ama o haga crecer su patrimonio invirtiendo \u2014 mi objetivo es simple: una transacci\u00f3n fluida, impecable y exitosa de principio a fin, respaldada por orientaci\u00f3n experta, negociaci\u00f3n firme y un profundo conocimiento del sector.",
 notice:"<strong>COMPRA \u00b7 VENTA \u00b7 INVERSI\u00d3N</strong> &nbsp;\u2014&nbsp; Ventas residenciales, propiedades de inversi\u00f3n y administraci\u00f3n de propiedades en el Gran Boston.",
 about_text:"HOME FOR ALL REALTY LLC es una agencia de Boston fundada con la idea de que un gran servicio inmobiliario no deber\u00eda depender del tama\u00f1o de la operaci\u00f3n. Comprador primerizo o inversionista experimentado \u2014 recibe el mismo marketing de lanzamiento y la misma defensa incansable."
 };
