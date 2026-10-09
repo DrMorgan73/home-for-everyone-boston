@@ -202,6 +202,7 @@ STRINGS.en.ab_meet_eyebrow="Meet your agent";STRINGS.en.ab_meet_h="Salustia Orti
 STRINGS.en.ab_role="Broker \u00b7 Dreamcatcher Investment Group, Inc.";
 STRINGS.en.ab_licensed="Licensed:";STRINGS.en.ab_cert="Certified Loss Mitigation Specialist";
 STRINGS.en.ab_wbenc="Proud member of the Women\u2019s Business Enterprise National Council &amp; the Greater New England Minority Supplier Development Council";
+STRINGS.en.ab_coverage="<strong>Doing business in Massachusetts</strong> \u2014 commercial real estate in all 50 states.";
 STRINGS.en.ab_bio="I\u2019m an expert real estate agent with Dreamcatcher Investment Group, Inc. in Boston, MA and the nearby area, providing home-buyers and sellers with professional, responsive and attentive real estate services. Want an agent who\u2019ll really listen to what you want in a home? Need an agent who knows how to effectively market your home so it sells? Give me a call! I\u2019m eager to help and would love to talk to you.";
 STRINGS.en.ab_office="Office:";STRINGS.en.ab_mobile="Mobile:";STRINGS.en.ab_email="Email:";
 STRINGS.en.cta_work="Work with Salustia";
@@ -269,6 +270,7 @@ STRINGS.es.ab_meet_eyebrow="Conozca a su agente";STRINGS.es.ab_meet_h="Salustia 
 STRINGS.es.ab_role="Corredora \u00b7 Dreamcatcher Investment Group, Inc.";
 STRINGS.es.ab_licensed="Licencias:";STRINGS.es.ab_cert="Especialista certificada en mitigaci\u00f3n de p\u00e9rdidas";
 STRINGS.es.ab_wbenc="Miembro orgullosa del Women\u2019s Business Enterprise National Council y del Greater New England Minority Supplier Development Council";
+STRINGS.es.ab_coverage="<strong>Haciendo negocios en Massachusetts</strong> \u2014 bienes ra\u00edces comerciales en los 50 estados.";
 STRINGS.es.ab_bio="Soy una agente experta en bienes ra\u00edces con Dreamcatcher Investment Group, Inc. en Boston, MA y alrededores, brindando a compradores y vendedores servicios profesionales, atentos y diligentes. \u00bfBusca una agente que realmente escuche lo que desea en un hogar? \u00bfNecesita una agente que sepa c\u00f3mo promocionar su casa para venderla? \u00a1Ll\u00e1meme! Estoy dispuesta a ayudar y me encantar\u00eda conversar con usted.";
 STRINGS.es.ab_office="Oficina:";STRINGS.es.ab_mobile="Celular:";STRINGS.es.ab_email="Correo:";
 STRINGS.es.cta_work="Trabaje con Salustia";
