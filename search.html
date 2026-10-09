@@ -27,68 +27,25 @@
   </div>
 </header>
 
-<section class="hero" style="padding:64px 0 52px">
+<section class="hero" style="padding:64px 0 44px">
   <div class="wrap">
     <div class="kicker" data-i18n="sr_kicker">MLS search</div>
     <h1 data-i18n="sr_h1">Search every listing.</h1>
-    <p class="lede" data-i18n="sr_lede">Start here — live MLS results open on Salustia&rsquo;s official property search, updated directly from the MLS.</p>
+    <p class="lede" data-i18n="sr_lede2">Live MLS listings, right here on our site — search below. Updated directly from the MLS.</p>
   </div>
 </section>
 
-<section class="section">
+<section class="section" style="padding-top:8px">
   <div class="wrap">
-    <div class="form" style="margin:0 auto">
-      <form id="mls-search" onsubmit="return openMlsSearch(event)">
-        <label for="s-loc" data-i18n="sr_loc">City, neighborhood, or address</label>
-        <input id="s-loc" data-i18n-ph="sr_loc_ph" placeholder="e.g. Boston, Jamaica Plain…">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 16px">
-          <div>
-            <label for="s-minp" data-i18n="sr_minp">Min price</label>
-            <select id="s-minp">
-              <option value="" data-i18n="sr_any">Any</option>
-              <option>$200,000</option><option>$300,000</option><option>$400,000</option>
-              <option>$500,000</option><option>$750,000</option><option>$1,000,000</option>
-              <option>$1,500,000</option>
-            </select>
-          </div>
-          <div>
-            <label for="s-maxp" data-i18n="sr_maxp">Max price</label>
-            <select id="s-maxp">
-              <option value="" data-i18n="sr_any">Any</option>
-              <option>$300,000</option><option>$400,000</option><option>$500,000</option>
-              <option>$750,000</option><option>$1,000,000</option><option>$1,500,000</option>
-              <option>$2,000,000</option>
-            </select>
-          </div>
-          <div>
-            <label for="s-beds" data-i18n="sr_beds">Beds</label>
-            <select id="s-beds">
-              <option value="" data-i18n="sr_any">Any</option>
-              <option>1+</option><option>2+</option><option>3+</option><option>4+</option><option>5+</option>
-            </select>
-          </div>
-          <div>
-            <label for="s-baths" data-i18n="sr_baths">Baths</label>
-            <select id="s-baths">
-              <option value="" data-i18n="sr_any">Any</option>
-              <option>1+</option><option>2+</option><option>3+</option><option>4+</option>
-            </select>
-          </div>
-        </div>
-        <label for="s-type" data-i18n="sr_type">Property type</label>
-        <select id="s-type">
-          <option value="" data-i18n="sr_any">Any</option>
-          <option data-i18n="opt_condo">Condo</option>
-          <option data-i18n="opt_single">Single-family</option>
-          <option data-i18n="opt_multi">Multi-family</option>
-          <option data-i18n="opt_town">Townhouse</option>
-        </select>
-        <div class="cta-row" style="margin-top:24px">
-          <button class="btn" type="submit" data-i18n="cta_search">Search homes</button>
-        </div>
-        <p class="note" data-i18n="sr_note">Free to use — results open on our official MLS search, included with our MLS membership. No extra fees, no sign-up needed to browse.</p>
-      </form>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+      <span style="font-size:13px;font-weight:700;letter-spacing:.5px;color:var(--green-deep)"><span style="color:#1e8e3e">●</span> <span data-i18n="sr_live">Live MLS results</span></span>
+      <a href="https://idx.mlspin.com/MLS.IDX/Search/index?agentid=BB807932" target="_blank" rel="noopener" style="font-size:13px;color:var(--green-deep)" data-i18n="sr_open">Open full search in new tab</a>
     </div>
+    <iframe src="https://idx.mlspin.com/MLS.IDX/Search/index?agentid=BB807932"
+            title="MLS property search"
+            style="width:100%;min-height:1150px;border:1px solid var(--line);border-radius:14px;background:#fff"
+            loading="eager"></iframe>
+    <p class="note" style="font-size:12.5px;color:var(--muted);margin-top:14px" data-i18n="sr_note2">Free to use — no extra fees, no sign-up needed to browse.</p>
   </div>
 </section>
 
@@ -102,14 +59,6 @@
   </div>
   <div class="foot-bottom"><span data-i18n="foot_rights">© 2026 HOME FOR ALL REALTY LLC. All rights reserved. · MA Broker License 24011548-RE-LC</span><span>Home for Everyone — Boston</span></div>
 </footer>
-<script>
-/* Hands the search off to Salustia's official MLS (IDX) search — free with her MLSPIN membership, no extra fees. */
-function openMlsSearch(e){
-  e.preventDefault();
-  window.open("https://idx.mlspin.com/MLS.IDX/Search/index?agentid=BB807932","_blank","noopener");
-  return false;
-}
-</script>
 <script src="assets/admin-data.js"></script>
 <script src="assets/i18n.js"></script>
 </body>
