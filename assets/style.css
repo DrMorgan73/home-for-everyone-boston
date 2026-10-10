@@ -131,3 +131,4 @@ footer{background:var(--green-deep);color:#cfc8b4;padding:56px 0 28px;margin-top
   .form{padding:24px 18px}
   .foot-bottom{flex-direction:column}
 }
+.video-frame{width:100%;border-radius:16px;box-shadow:0 12px 40px rgba(12,59,46,.18);background:#0d1b2a;margin-top:18px}
