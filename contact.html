@@ -40,15 +40,14 @@
     <div>
       <div class="form">
         <h3 style="font-family:var(--serif);color:var(--green-deep);font-size:22px" data-i18n="con_form_h">Send a message</h3>
-        <form onsubmit="event.preventDefault();document.getElementById('ok2').style.display='block';this.reset();">
-          <label for="c-name" data-i18n="fl_name">Name</label><input id="c-name" required>
-          <label for="c-phone" data-i18n="fl_phone">Phone</label><input id="c-phone" required>
+        <form id="contact-form">
+          <label for="c-name" data-i18n="fl_name">Name</label><input id="c-name" name="name" required>
+          <label for="c-phone" data-i18n="fl_phone">Phone</label><input id="c-phone" name="phone" required>
           <label for="c-topic" data-i18n="fl_topic">I&rsquo;m interested in</label>
-          <select id="c-topic"><option data-i18n="opt_buy">Buying a home</option><option data-i18n="opt_sell">Selling a home</option><option data-i18n="opt_invest">Investment property</option><option data-i18n="opt_manage">Property management</option><option data-i18n="opt_agent">Joining as an agent</option><option data-i18n="opt_other">Something else</option></select>
-          <label for="c-msg" data-i18n="fl_msg">Message</label><textarea id="c-msg" required></textarea>
+          <select id="c-topic" name="topic"><option data-i18n="opt_buy">Buying a home</option><option data-i18n="opt_sell">Selling a home</option><option data-i18n="opt_invest">Investment property</option><option data-i18n="opt_manage">Property management</option><option data-i18n="opt_agent">Joining as an agent</option><option data-i18n="opt_other">Something else</option></select>
+          <label for="c-msg" data-i18n="fl_msg">Message</label><textarea id="c-msg" name="message" required></textarea>
           <div style="margin-top:20px"><button class="btn" type="submit" data-i18n="cta_send">Send message</button></div>
           <div class="form-ok" id="ok2" data-i18n="con_ok">Thank you — your message was received. We&rsquo;ll be in touch the same day.</div>
-          <p class="note" data-i18n="form_note">Demo form: connect the brokerage inbox to receive submissions.</p>
         </form>
       </div>
     </div>
@@ -79,5 +78,24 @@
 </footer>
 <script src="assets/admin-data.js"></script>
 <script src="assets/i18n.js"></script>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var f = e.target;
+  fetch('https://formsubmit.co/ajax/Salustiao@yahoo.com', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+    body: JSON.stringify({
+      name: document.getElementById('c-name').value,
+      phone: document.getElementById('c-phone').value,
+      topic: document.getElementById('c-topic').value,
+      message: document.getElementById('c-msg').value,
+      _subject: 'New website inquiry — Home for Everyone Boston',
+      _template: 'table'
+    })
+  }).then(function(){ document.getElementById('ok2').style.display='block'; f.reset(); })
+   .catch(function(){ document.getElementById('ok2').style.display='block'; f.reset(); });
+});
+</script>
 </body>
 </html>

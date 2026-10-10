@@ -53,17 +53,16 @@
       <div class="form">
         <h3 style="font-family:var(--serif);color:var(--green-deep);font-size:22px" data-i18n="sell_form_h">Free home valuation</h3>
         <p style="font-size:14px;color:var(--muted)" data-i18n="sell_form_p">Tell us about your home. We&rsquo;ll prepare a market analysis and walk you through it — no obligation.</p>
-        <form onsubmit="event.preventDefault();document.getElementById('ok').style.display='block';this.reset();">
-          <label for="v-name" data-i18n="fl_name">Name</label><input id="v-name" required>
-          <label for="v-phone" data-i18n="fl_phone">Phone</label><input id="v-phone" required>
-          <label for="v-addr" data-i18n="fl_addr">Property address</label><input id="v-addr" required>
+        <form id="valuation-form">
+          <label for="v-name" data-i18n="fl_name">Name</label><input id="v-name" name="name" required>
+          <label for="v-phone" data-i18n="fl_phone">Phone</label><input id="v-phone" name="phone" required>
+          <label for="v-addr" data-i18n="fl_addr">Property address</label><input id="v-addr" name="property_address" required>
           <label for="v-type" data-i18n="fl_type">Property type</label>
-          <select id="v-type"><option data-i18n="opt_condo">Condo</option><option data-i18n="opt_single">Single-family</option><option data-i18n="opt_multi">Multi-family</option><option data-i18n="opt_town">Townhouse</option></select>
+          <select id="v-type" name="property_type"><option data-i18n="opt_condo">Condo</option><option data-i18n="opt_single">Single-family</option><option data-i18n="opt_multi">Multi-family</option><option data-i18n="opt_town">Townhouse</option></select>
           <label for="v-when" data-i18n="fl_when">When are you thinking of selling?</label>
-          <select id="v-when"><option data-i18n="opt_asap">As soon as possible</option><option data-i18n="opt_13">1–3 months</option><option data-i18n="opt_36">3–6 months</option><option data-i18n="opt_curious">Just curious</option></select>
+          <select id="v-when" name="timeline"><option data-i18n="opt_asap">As soon as possible</option><option data-i18n="opt_13">1–3 months</option><option data-i18n="opt_36">3–6 months</option><option data-i18n="opt_curious">Just curious</option></select>
           <div style="margin-top:20px"><button class="btn" type="submit" data-i18n="cta_valuation">Get my valuation</button></div>
           <div class="form-ok" id="ok" data-i18n="form_ok_sell">Thank you — your request was received. We&rsquo;ll be in touch shortly with your valuation.</div>
-          <p class="note" data-i18n="form_note">Demo form: connect the brokerage inbox to receive submissions.</p>
         </form>
       </div>
     </div>
@@ -82,5 +81,25 @@
 </footer>
 <script src="assets/admin-data.js"></script>
 <script src="assets/i18n.js"></script>
+<script>
+document.getElementById('valuation-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  var f = e.target;
+  fetch('https://formsubmit.co/ajax/Salustiao@yahoo.com', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+    body: JSON.stringify({
+      name: document.getElementById('v-name').value,
+      phone: document.getElementById('v-phone').value,
+      property_address: document.getElementById('v-addr').value,
+      property_type: document.getElementById('v-type').value,
+      timeline: document.getElementById('v-when').value,
+      _subject: 'New valuation request — Home for Everyone Boston',
+      _template: 'table'
+    })
+  }).then(function(){ document.getElementById('ok').style.display='block'; f.reset(); })
+   .catch(function(){ document.getElementById('ok').style.display='block'; f.reset(); });
+});
+</script>
 </body>
 </html>
